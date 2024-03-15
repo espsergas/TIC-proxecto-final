@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos Informativos</title>
+</head>
+<body>
+    <h1>Introducir Textos Informativos</h1>
+    <form action="/agregar" method="post">
+        <textarea name="texto" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Agregar Texto">
+    </form>
+
+    <h2>Textos Informativos:</h2>
+    <ul>
+        {% for texto in textos %}
+            <li>{{ texto }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
